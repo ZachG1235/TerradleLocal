@@ -3,8 +3,6 @@ import random
 from enum import Enum
 from constants import *
 
-
-
 class Rarity(Enum):
     WHITE = 0
     BLUE = 1
@@ -463,7 +461,6 @@ def game():
     guessList = []
     userData = UserDataConfig()
 
-    #print(x.solutionWeapon)
     while x.solutionWeapon != searchedWeapon:
         displayHintStatus(guessList, userData, x.solutionWeapon)
 
@@ -535,7 +532,7 @@ def game():
 
 
 def main():
-    outerUserInput = "Hello"
+    outerUserInput = "dummy"
     print("Welcome to the local Terradle game, coded by Zach")
     while outerUserInput[0].lower() != 'n':
         game()
@@ -543,22 +540,3 @@ def main():
     print("Thanks for playing!")
 
 main()
-
-
-
-# def newSearch(dick):
-#     returnList = []
-#     for each_item in dick:
-#         if len(each_item['data']['obtained']) > 1:
-#             returnList.append(each_item)
-#     return returnList
-
-# y = WeaponData("weapons.json")
-
-# myList = newSearch(y.weaponDict)
-
-# for cur_weapon in myList:
-#     print(cur_weapon['data']['name'], end=': ')
-#     for each_method in cur_weapon['data']['obtained']:
-#         print(each_method, end=' ')
-#     print()
